@@ -138,7 +138,7 @@ public class DataValidator {
 	public static boolean isEmail(String val) {
 
 		String emailreg = "^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
-		
+
 		if (isNotNull(val)) {
 			try {
 				return val.matches(emailreg);
@@ -165,33 +165,34 @@ public class DataValidator {
 		}
 		return d != null;
 	}
+
 	/**
 	 * Checks if value is College name
 	 * 
 	 * @param val
 	 * @return
 	 */
-	public static  boolean isCollegeName(String val){
-		String str1  = "([a-zA-Z]{4,30}) + ([0-9]?)";
-		if((val.matches(str1))){
+	public static boolean isCollegeName(String val) {
+		String str1 = "([a-zA-Z]{4,30}) + ([0-9]?)";
+		if ((val.matches(str1))) {
 			return true;
-		}else {
+		} else {
 			return false;
 		}
 	}
 
-	public static  boolean isSate(String val){
-		//String str1  = "([a-zA-Z]{4,30}) + ([0-9]?)";
+	public static boolean isSate(String val) {
+		// String str1 = "([a-zA-Z]{4,30}) + ([0-9]?)";
 		String str1 = "[_A-Za-z]+(.[_A-Za-z0-9-]+)[A-Za-z]";
-		if((val.matches(str1))){
+		if ((val.matches(str1))) {
 			return true;
-		}else {
+		} else {
 			return false;
 		}
 	}
-	
+
 	/**
-	 * Checks if  validss age
+	 * Checks if validss age
 	 * 
 	 * @param val
 	 * @return
@@ -220,45 +221,24 @@ public class DataValidator {
 	 * @param val
 	 * @return
 	 */
-/*	public static boolean isCollegeName(String val){
-		boolean flag;
-		//String str = "([A-Z]{0,30}) + ([0-9]{0,5})";
-//		"^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
-	//	shikha.sharmao925@gmail.
-		String str = "^[_A-Za-z]{2,}+(\\[0-9-])$";
-		if(val.matches(str))
-		{
-			if (!isWhiteSpace(val)) {
+	/*
+	 * public static boolean isCollegeName(String val){ boolean flag; //String str =
+	 * "([A-Z]{0,30}) + ([0-9]{0,5})"; //
+	 * "^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
+	 * // shikha.sharmao925@gmail. String str = "^[_A-Za-z]{2,}+(\\[0-9-])$";
+	 * if(val.matches(str)) { if (!isWhiteSpace(val)) {
+	 * 
+	 * if (isLong(val)) { if (Long.parseLong(val) > 0) { flag = true; } else { flag
+	 * = false; } } else if (isInteger(val)) { if (Integer.parseInt(val) > 0) { flag
+	 * = true; } else { flag = false; }
+	 * 
+	 * } else { flag = true; } } else { flag = false; } } else { flag = false; }
+	 * return flag; }
+	 */
 
-				if (isLong(val)) {
-					if (Long.parseLong(val) > 0) {
-						flag = true;
-					} else {
-						flag = false;
-					}
-				} else if (isInteger(val)) {
-					if (Integer.parseInt(val) > 0) {
-						flag = true;
-					} else {
-						flag = false;
-					}
-
-				} else {
-					flag = true;
-				}
-			} else {
-				flag = false;
-			}
-		} else {
-			flag = false;
-		}
-		return flag;
-	}
-		*/
-	
 	public static boolean isRollNo(String val) {
 		boolean flag;
-		//String str = "([_A-Za-z0-9]+)";
+		// String str = "([_A-Za-z0-9]+)";
 		String str = "([0-9]{4})+([A-Za-z]{2})+[0-9]{5}";
 		if (val.matches(str)) {
 			if (!isWhiteSpace(val)) {
@@ -287,17 +267,18 @@ public class DataValidator {
 		}
 		return flag;
 	}
-	
+
 	public static boolean isRollNo1(String val) {
 		boolean flag;
-		//String str = "([_A-Za-z0-9]+)";
+		// String str = "([_A-Za-z0-9]+)";
 		String str = "([0-9]{4})+([A-Z]{2})+[0-9]{5}";
 		if (val.matches(str)) {
-		return true;
-	}else{
-		return false;
+			return true;
+		} else {
+			return false;
+		}
 	}
-	}
+
 	/**
 	 * Checks if valid Roll no
 	 * 
@@ -307,9 +288,9 @@ public class DataValidator {
 	public static boolean isRollNum(String val) {
 		boolean flag;
 		String str = "([0-9]{4})+([A-Z]{2})+[0-9]{6}";
-		
+
 		// ^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$
-		
+
 		if (val.matches(str)) {
 			if (!isWhiteSpace(val)) {
 
@@ -351,9 +332,9 @@ public class DataValidator {
 		// Date beforedate = cal.getTime();
 		System.out.println(todayDate + "Today date   " + userDate + "    userDate");
 		/*
-		 * if((userDate.compareTo(todayDate) == -1) &&
-		 * (userDate.compareTo(todayDate) == 0)) { System.out.println(
-		 * "in validator"); return false; } else { return true; }
+		 * if((userDate.compareTo(todayDate) == -1) && (userDate.compareTo(todayDate) ==
+		 * 0)) { System.out.println( "in validator"); return false; } else { return
+		 * true; }
 		 */
 		if (userDate.compareTo(todayDate) == -1 || userDate.compareTo(todayDate) == 0) {
 			System.out.println("tttttttt");
@@ -369,42 +350,42 @@ public class DataValidator {
 	 * @param val
 	 * @return
 	 */
-	
-	public static boolean isLength( String val){
-		if(val.length()==10){
+
+	public static boolean isLength(String val) {
+		if (val.length() == 10) {
 			return true;
 		}
 		return false;
 	}
-	
+
 	/**
 	 * Checks if phone Length
 	 * 
 	 * @param val
 	 * @return
 	 */
-	
-	public static boolean isPhnLength ( String value){
-		System.out.println(value.length()+"<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<");
 
-		if(value.length()==11){
+	public static boolean isPhnLength(String value) {
+		System.out.println(value.length() + "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<");
+
+		if (value.length() == 11) {
 			return true;
 		}
 		return false;
 	}
-	
+
 	/**
 	 * Checks if phone number is valid
 	 * 
 	 * @param val
 	 * @return
 	 */
-	
-	public static boolean isPhoneNo(String val){
+
+	public static boolean isPhoneNo(String val) {
 		if (val.length() == 11) {
 			// return true;
 			String str = "[0-1]+([0-9]+)";
-			//String str = "(?([0-9]{3}))?([ .-]?)([0-9]{3})\2([0-9]{4})/";
+			// String str = "(?([0-9]{3}))?([ .-]?)([0-9]{3})\2([0-9]{4})/";
 			if (val.matches(str)) {
 				if (isLong(val)) {
 					return true;
@@ -426,7 +407,7 @@ public class DataValidator {
 	 * @param val
 	 * @return
 	 */
-	
+
 	public static boolean isValideMobileNo(String val) {
 		if (val.length() == 10) {
 			// return true;
